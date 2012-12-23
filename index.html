@@ -1,24 +1,22 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<style type="text/css">
-  body{
-      background-color: rgba(65, 131, 196, 0.4);
-      font-family: Monaco, "Liberation Mono", Courier, monospace;
-     }
-  
-</style>
-<title>my site on github</title>
-</head>
-<body>
-<h1>Hello,world!</h1>
-<div>this is about github useage!</div>
+---
+layout: default
+title: walk by faith
+---
+
+<div id="home">
 <a href="/a.htm">想去滑雪吗?</a>
+<h1>Hello,world!</h1>
 <ol>
   <li>Year, I am still a newbie.</li>
   <li>I know what I should do.</li>
   <li>Keep myself real and simple.</li>
 </ol>
+    <h1>Blog Posts</h1>
+    <ul class="posts">
+        {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
 </body>
 </html>

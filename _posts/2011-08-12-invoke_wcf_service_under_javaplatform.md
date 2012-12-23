@@ -1,0 +1,95 @@
+---
+title: Java平台下调用WCF服务
+author: mathewxiang
+layout: post
+permalink: /2011/08/invoke_wcf_service_under_javaplatform/
+categories:
+  - 默认
+tags:
+  - asp.net web service
+  - java
+  - wcf
+---
+前些天我用WCF开发的服务,然后在微软平台下所有基本上能够实现的客户端上实现了对于WCF服务的调用.昨晚上在想那时候刚开始我花了很多的时间精力在Java web 的开发上,可是现在我却用.net的技术在工作挣生活费,多么悲催的生活啊.不过其实说来什么技术不重要,因为我不会成为那些大牛去创造新技术,我能够实现的也就是站在他们的肩膀上为人类创造有用的产品罢了,说来这个理想也是蛮伟大的啊.呵呵
+
+下面就来说说具体在Java web项目中是怎么实现调用WCf服务的.刚开始做的时候也搜索页一番.[邀月周记 from csdn][1],这个作者写了好几篇文章说明这些技术的使用,感谢他.
+
+接下来就是按照我的思路和理解来实现在java平台下对WCF服务的调用了.首先在Visual Studio 中创建WCF服务项目.然后实现一点简单的逻辑处理.<!--more-->
+
+环境:
+
+> java version “1.4.2_03″  
+> Java(TM) 2 Runtime Environment, Standard Edition (build 1.4.2_03-b02)  
+> Java HotSpot(TM) Client VM (build 1.4.2_03-b02, mixed mode)
+> 
+> Visual Studio2010
+> 
+> Myeclipse 8.5
+
+
+
+对于WCF服务开发主要有以下几点需要注意的:
+
+1.  新建wcf service application
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step1" border="0" alt="step1" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step1_thumb.png" width="699" height="625" />][2]
+
+2. 项目的目录结构:
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step2" border="0" alt="step2" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step2_thumb.png" width="364" height="418" />][3]
+
+在这里我添加一个DB文件,有一个Student的表,然后添加了Linq to SQL映射文件.
+
+3. 下面来看看Wcf service的实现,vs已经用模板实现了基本框架,这是service的接口类:
+
+在接口里添加我的方法:GetAllStudents().注意接口有ServiceContract属性(Attribute).而方法有OperationContract属性(Attribute).
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step3" border="0" alt="step3" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step3_thumb.png" width="590" height="366" />][4]
+
+4. 这是实现了接口类的具体服务:
+
+在这里就和平时的写法是一样的,完全按照正常的处理步骤来实现你的逻辑就行,我添加了读取全部学生的方法的具体实现.
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step4" border="0" alt="step4" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step4_thumb.png" width="652" height="662" />][5]
+
+到这里WCF服务基本实现,接下来就是在Java平台下实现调用了:
+
+1. 首先创建Java web application
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step6" border="0" alt="step6" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step6_thumb.png" width="352" height="367" />][6]
+
+2. 接下来就是使用工具开生成wcf服务了,在这里jdk已经为我们提供了现成的工具.就在jdk的安装包下/bin目录,启动命令行:
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step5" border="0" alt="step5" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step5_thumb.png" width="396" height="529" />][7]
+
+> wmimport –d d:\generated <http://localost:80/service1.svc?Wsdl>
+> 
+> a) 首先要把java的bin目录添加到环境变量里.
+> 
+> b) 如果有什么不懂的或者更多的了解的,可以wsimport –help来了解更多.
+> 
+> c) d:\generated这个目录需在执行前创建
+> 
+> d) 服务地址需要对于你服务的地址,而且要跟上wsdl这个参数,否则会报错的
+
+3. 会生成2个文件夹,直接拷贝到你的java项目中
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step7" border="0" alt="step7" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step7_thumb.png" width="363" height="603" />][8]
+
+4. 让我们来实现调用吧:
+
+[<img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="step8" border="0" alt="step8" src="http://www.yyxzy.org/wp-content/uploads/2011/08/step8_thumb.png" width="689" height="605" />][9]
+
+就是这样我们实现了在Java平台下对WCF 的调用.
+
+很简陋,(未完待续)
+
+ [1]: http://www.google.com/url?sa=t&source=web&cd=1&ved=0CBUQFjAA&url=http%3A%2F%2Fblog.csdn.net%2Fdownmoon%2Farticle%2Fdetails%2F5834773&ei=OvBETu-rHIr8mAXbgYH9Bg&usg=AFQjCNFhzt_vuSNSilUBJQzBTM6bH1a2Ow&sig2=rwDQ-CqtmXmzYHhjihcEEw
+ [2]: http://www.yyxzy.org/wp-content/uploads/2011/08/step1.png
+ [3]: http://www.yyxzy.org/wp-content/uploads/2011/08/step2.png
+ [4]: http://www.yyxzy.org/wp-content/uploads/2011/08/step3.png
+ [5]: http://www.yyxzy.org/wp-content/uploads/2011/08/step4.png
+ [6]: http://www.yyxzy.org/wp-content/uploads/2011/08/step6.png
+ [7]: http://www.yyxzy.org/wp-content/uploads/2011/08/step5.png
+ [8]: http://www.yyxzy.org/wp-content/uploads/2011/08/step7.png
+ [9]: http://www.yyxzy.org/wp-content/uploads/2011/08/step8.png
