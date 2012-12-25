@@ -1,8 +1,0 @@
----
-layout: post
-title: uniqlo.com
-date: 2010-05-13 20:51
-comments: true
-categories: []
----
-<object codebase="http://fpdownload.adobe.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="424" height="278"><param name="_cx" value="11218"/><param name="_cy" value="7355"/><param name="FlashVars" value=""/><param name="Movie" value="http://www.uniqlo.jp/uniqlock/swf/blog_large.swf?user_id=UYzfxz6TIEWSOjif"/><param name="Src" value="http://www.uniqlo.jp/uniqlock/swf/blog_large.swf?user_id=UYzfxz6TIEWSOjif"/><param name="WMode" value="Transparent"/><param name="Play" value="0"/><param name="Loop" value="-1"/><param name="Quality" value="High"/><param name="SAlign" value="LT"/><param name="Menu" value="-1"/><param name="Base" value=""/><param name="AllowScriptAccess_old" value="always"/><param name="Scale" value="NoScale"/><param name="DeviceFont" value="0"/><param name="EmbedMovie" value="0"/><param name="BGColor" value=""/><param name="SWRemote" value=""/><param name="MovieData" value=""/><param name="SeamlessTabbing" value="1"/><param name="Profile" value="0"/><param name="ProfileAddress" value=""/><param name="ProfilePort" value="0"/><param name="AllowNetworking" value="all"/><param name="AllowFullScreen" value="false"/><embed src="http://www.uniqlo.jp/uniqlock/swf/blog_large.swf?user_id=UYzfxz6TIEWSOjif" width="424" height="278" allowscriptaccess="samedomain" base="." quality="high" wmode="transparent" pluginspage="http://www.adobe.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"/><embed allowscriptaccess="never"/></object>
