@@ -1,0 +1,44 @@
+---
+title: HTML5
+author: mathewxiang
+layout: page
+---
+<img title="HTML5" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="HTML5" width="256" height="256" />
+
+<table style="border: 1px solid #cccccc; margin: 0px 0px 10px 10px; padding: 0px 10px; background: #eeeeee none repeat scroll 0% 50%; clear: both; width: 100%; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;" width="571">
+  <tr>
+    <td colspan="2">
+      <strong>HTML5 Documentation</strong>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="width: 100px;">
+      <a title="en/HTML/HTML5/HTML5 Thematic Classification#HTML" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#HTML" rel="bookmark">HTML</a>
+    </td>
+    
+    <td>
+      <a title="en/Using audio and video in Firefox" href="https://developer.mozilla.org/en/Using_HTML5_audio_and_video" rel="bookmark">Audio/Video</a> <a title="en/HTML/Canvas" href="https://developer.mozilla.org/en/HTML/Canvas" rel="bookmark">Canvas</a> <a title="https://developer.mozilla.org/en/WebGL" href="https://developer.mozilla.org/en/WebGL" rel="bookmark">WebGL</a> <a title="en/SVG" href="https://developer.mozilla.org/en/SVG" rel="bookmark">SVG</a> <a title="en/MathML" href="https://developer.mozilla.org/en/MathML" rel="bookmark">MathML</a> <a title="en/HTML/HTML5/HTML5 Thematic Classification#WebForms" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#WebForms" rel="bookmark">WebForms</a> <a title="en/Using Application Cache" href="https://developer.mozilla.org/en/Using_Application_Cache" rel="bookmark">AppCache</a> <a title="en/Using microformats" href="https://developer.mozilla.org/en/Using_microformats" rel="bookmark">Microformats</a> <a title="en/HTML/HTML5/HTML5 Thematic Classification#Semantic tags" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#Semantic_tags" rel="bookmark">SemanticTags</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="width: 100px;">
+      <a title="en/HTML/HTML5/HTML5 Thematic Classification#Javascript" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#Javascript" rel="bookmark">Javascript</a>
+    </td>
+    
+    <td>
+      <a title="en/HTML/HTML5/HTML5 Thematic Classification#Client-Side Storage" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#Client-Side_Storage" rel="bookmark">Storage</a> <a title="en/HTML/HTML5/HTML5 Thematic Classification#IndexDB" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#IndexDB" rel="bookmark">IndexDB</a> <a href="https://developer.mozilla.org/en/WebSockets">WebSockets</a> <a title="en/Using web workers" href="https://developer.mozilla.org/en/Using_web_workers" rel="bookmark">WebWorkers</a> <a title="en/Online and offline events" href="https://developer.mozilla.org/en/Online_and_offline_events" rel="bookmark">Events</a> <a title="en/DragDrop/Drag and Drop" href="https://developer.mozilla.org/en/DragDrop/Drag_and_Drop" rel="bookmark">Drag/Drop</a> <a title="en/Web-based protocol handlers" href="https://developer.mozilla.org/en/Web-based_protocol_handlers" rel="bookmark">ProtocolHandler</a> <a title="en/Using geolocation" href="https://developer.mozilla.org/en/Using_geolocation" rel="bookmark">Geolocation</a> <a title="en/Focus management in HTML" href="https://developer.mozilla.org/en/Focus_management_in_HTML" rel="bookmark">Focus</a>
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="width: 100px;">
+      <a title="en/HTML/HTML5/HTML5 Thematic Classification#CSS" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#CSS" rel="bookmark">CSS</a>
+    </td>
+    
+    <td>
+      <a title="en/Mozilla CSS support chart" href="https://developer.mozilla.org/en/Mozilla_CSS_support_chart" rel="bookmark">NewSelectors</a> <a title="en/HTML/HTML5/HTML5 Thematic Classification#Typography" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#Typography" rel="bookmark">Typography</a> <a title="en/HTML/HTML5/HTML5 Thematic Classification#Visual" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#Visual" rel="bookmark">Visual</a> <a title="en/HTML/HTML5/HTML5 Thematic Classification#Effects" href="https://developer.mozilla.org/en/HTML/HTML5/HTML5_Thematic_Classification#Effects" rel="bookmark">Effects</a>
+    </td>
+  </tr>
+</table>
