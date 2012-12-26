@@ -1,5 +1,5 @@
-url:        /         # For rewriting urls for RSS, etc
-title:      walk by faith        # Used in the header and title tags
+url:        /         						# For rewriting urls for RSS, etc
+title:      walk by faith        			# Used in the header and title tags
 subtitle:       a full-stack developer    # A description used in the header
 author:           mathewxiang  # Your name, for RSS, Copyright, Metadata
 simple_search:      # Search engine for simple site search
