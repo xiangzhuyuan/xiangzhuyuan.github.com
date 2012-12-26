@@ -1,7 +1,7 @@
 ---
 title: HTML5
 author: mathewxiang
-layout: page
+layout: default
 ---
 <img title="HTML5" src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" alt="HTML5" width="256" height="256" />
 

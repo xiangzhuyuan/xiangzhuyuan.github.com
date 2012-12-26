@@ -1,7 +1,7 @@
 ---
 title: 26
 author: mathewxiang
-layout: page
+layout: default
 ---
 # 十月胎恩重，三生报答轻。
 
