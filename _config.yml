@@ -1,3 +1,7 @@
+markdown: rdiscount
+pygments: true
+
+
 url:        /         						# For rewriting urls for RSS, etc
 title:      walk by faith        			# Used in the header and title tags
 subtitle:       a full-stack developer    # A description used in the header
@@ -9,3 +13,6 @@ subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
 subscribe_email:    # Url to subscribe by email (service required)
 category_feeds:     # Enable per category RSS feeds (defaults to false in 2.1)
 email:                     xiangzhuyuan@gmail.com
+
+
+
