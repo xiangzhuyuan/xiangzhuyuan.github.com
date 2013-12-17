@@ -4,16 +4,17 @@ title: Walk by faith!
 ---
 
 <div id="home">
-<a href="/a.htm">想去滑雪吗?</a>
+<!--<a href="/a.htm">想去滑雪吗?</a>
 <a href="/jQuery/index.htm">jQuery</a>
 <a href="/html5/index.html">HTML5</a>
 <a href="/26/index.html">26</a>
+-->
 <h1>Hello,world!</h1>
-<ol>
+<!--<ol>
   <li>Year, I am still a newbie.</li>
   <li>I know what I should do.</li>
   <li>Keep myself real and simple.</li>
-</ol>
+</ol>-->
     <h1>My repositories:</h1>
     <ul class="posts">
        <!-- {% for post in site.posts %}
@@ -28,17 +29,17 @@ title: Walk by faith!
 <script type='text/javascript'>
   $(
     function(){
-      $.ajax(
-          url:'https://api.github.com/users/xiangzhuyuan/repos',
-          type:'get',
-          dataType:'json',
-          error:function(){
-            $('ul.posts').text("error! reload this page!");
-          },
-          success:function(data){
-            $('ul.posts').text(data);
-          },
-        )
+      $.ajax({
+            url:'https://api.github.com/users/xiangzhuyuan/repos',
+            type:'get',
+            dataType:'json',
+            error:function(){
+              $('ul.posts').html("error! reload this page!");
+            },
+            success:function(data){
+              $('ul.posts').html(data);
+            },
+        })
     });
   
 </script>
