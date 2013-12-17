@@ -27,20 +27,29 @@ title: Walk by faith!
 </div>
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script type='text/javascript'>
-  $(
-    function(){
+$(function(){
       $.ajax({
-            url:'https://api.github.com/users/xiangzhuyuan/repos',
-            type:'get',
-            dataType:'json',
-            error:function(){
-              $('ul.posts').html("error! reload this page!");
-            },
-            success:function(data){
-              $('ul.posts').html(data);
-            },
-        })
-    });
+        url:'https://api.github.com/users/xiangzhuyuan/repos',
+        type:'get',
+        dataType:'json',
+beforeSend:function(){
+        $('ul.posts').html("稍等.../on loading/少々お待ちください!");
+},        
+complete:function(){
+ //$('ul.posts').html("");
+},
+
+error:function(){
+          $('ul.posts').html("error! reload this page!")
+        },
+        success:function(data){
+          $('ul.posts').html('');
+          for(var i=0; i<data.length;i++){
+              console.info(data[i].name);
+              $('ul.posts').append('<li><a href='+"'"+data[i].html_url+"'"+">"+data[i].name+"</a>&nbsp;&nbsp;&nbsp;["+data[i].description+"]")}
+        },
+     })
+});
   
 </script>
 </body>
