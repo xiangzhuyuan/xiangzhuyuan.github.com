@@ -29,15 +29,15 @@ title: Walk by faith!
   $(
     function(){
       $.ajax(
-        url:'https://api.github.com/users/xiangzhuyuan/repos';
-        type:'get';
-        dataType:'json';
-        error:function(){
-          $('ul.posts').text("error! reload this page!")
-        }
-        success:function(data){
-          $('ul.posts').text(data)
-        }
+          url:'https://api.github.com/users/xiangzhuyuan/repos',
+          type:'get',
+          dataType:'json',
+          error:function(){
+            $('ul.posts').text("error! reload this page!");
+          },
+          success:function(data){
+            $('ul.posts').text(data);
+          },
         )
     });
   
