@@ -14,12 +14,33 @@ title: Walk by faith!
   <li>I know what I should do.</li>
   <li>Keep myself real and simple.</li>
 </ol>
-    <h1>Blog Posts</h1>
+    <h1>My repositories:</h1>
     <ul class="posts">
-        {% for post in site.posts %}
+       <!-- {% for post in site.posts %}
         <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
+        -->
+        
+        
     </ul>
 </div>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type='text/javascript'>
+  $(
+    function(){
+      $.ajax(
+        url:'https://api.github.com/users/xiangzhuyuan/repos';
+        type:'get';
+        dataType:'json';
+        error:function(){
+          $('ul.posts').text("error! reload this page!")
+        }
+        success:function(data){
+          $('ul.posts').text(data)
+        }
+        )
+    });
+  
+</script>
 </body>
 </html>
