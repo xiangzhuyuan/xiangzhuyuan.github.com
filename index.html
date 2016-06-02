@@ -31,7 +31,7 @@ $(function(){
           $('dl.posts').html('');
           for(var i=0; i<data.length;i++){
               console.info(data[i].name);
-              $('dl.posts').append('<dt><a href='+"'"+data[i].html_url+"'"+">"+data[i].name+"</a></dt><dd>"+data[i].description+"</dd>")}
+              $('dl.posts').append('<dt><a href='+"'"+data[i].html_url+"'"+"><h3>"+data[i].name+"</h3></a></dt><dd>"+data[i].description+"</dd>")}
         },
      })
 });
