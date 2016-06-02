@@ -1,5 +1,5 @@
-markdown: rdiscount
-pygments: true
+markdown: 		rdiscount
+highlighter: 	rouge
 
 
 url:        /         						# For rewriting urls for RSS, etc
@@ -9,7 +9,7 @@ author:           mathewxiang  # Your name, for RSS, Copyright, Metadata
 simple_search:      # Search engine for simple site search
 description:     developer work   # A default meta description for your site
 date_format:    yyyy/MM/dd    # Format dates using Ruby's date strftime syntax
-subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+subscribe_rss:     http://code.xiangzhuyuan.com/atom.xml # Url for your blog's feed, defauts to /atom.xml
 subscribe_email:    # Url to subscribe by email (service required)
 category_feeds:     # Enable per category RSS feeds (defaults to false in 2.1)
 email:                     xiangzhuyuan@gmail.com
