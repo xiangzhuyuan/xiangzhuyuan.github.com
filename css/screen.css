@@ -51,7 +51,9 @@ table {
     font: 100%;
 }
 
-
+dt {
+    margin-bottom: 10px;
+}
 dd {
     display: block;
     margin-left: 20px;
