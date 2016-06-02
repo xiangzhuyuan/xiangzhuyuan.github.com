@@ -1,11 +1,11 @@
 *{margin:0;padding:0}
 html,body{height:100%}
 body{background-color:#fff;font:13.34px helvetica,arial,clean,sans-serif;*font-size:small;text-align:center}
-h1,h2,h3,h4,h5,h6{font-size:100%}
+h1,h2,h3,h4,h5,h6{font-size: 2rem;margin: 1.5rem auto;border-bottom: 1px black;transition: background .15s cubic-bezier(0.33,0.66,0.66,1);}
 h1{margin-bottom:1em}
 p{margin:1em 0}
 a{color:#00a}
-a{color:#a00;text-decoration:none}
+a{color:#a00;text-decoration:none;transition: background .15s cubic-bezier(0.33,0.66,0.66,1);box-shadow: inset 0 -5px 0 #55acee;border-bottom: 0 solid #55acee;}
 a:hover{color:#000}
 a:visited{color:#a0a}
 table{font-size:inherit;font:100%}
