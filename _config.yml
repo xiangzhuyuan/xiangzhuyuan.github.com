@@ -1,0 +1,18 @@
+markdown: rdiscount
+pygments: true
+
+
+url:        /         						# For rewriting urls for RSS, etc
+title:      walk by faith        			# Used in the header and title tags
+subtitle:       a full-stack developer    # A description used in the header
+author:           mathewxiang  # Your name, for RSS, Copyright, Metadata
+simple_search:      # Search engine for simple site search
+description:     developer work   # A default meta description for your site
+date_format:    yyyy/MM/dd    # Format dates using Ruby's date strftime syntax
+subscribe_rss:      # Url for your blog's feed, defauts to /atom.xml
+subscribe_email:    # Url to subscribe by email (service required)
+category_feeds:     # Enable per category RSS feeds (defaults to false in 2.1)
+email:                     xiangzhuyuan@gmail.com
+
+
+
