@@ -7,8 +7,8 @@ title: Walk by faith!
 
 <h1>Hello,world!</h1>
     <h1>My repositories on Github:</h1>
-    <ul class="posts">
-    </ul>
+    <dl class="posts">
+    </dl>
 </div>
 <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
 <script type='text/javascript'>
@@ -17,21 +17,21 @@ $(function(){
         url:'https://api.github.com/users/xiangzhuyuan/repos',
         type:'get',
         dataType:'json',
-beforeSend:function(){
-        $('ul.posts').html("稍等.../on loading/少々お待ちください!");
-},        
-complete:function(){
- //$('ul.posts').html("");
-},
+        beforeSend:function(){
+          $('dl.posts').html("稍等.../on loading/少々お待ちください!");
+        },        
+        complete:function(){
+          //$('ul.posts').html("");
+        },
 
-error:function(){
-          $('ul.posts').html("error! reload this page!")
+        error:function(){
+          $('dl.posts').html("error! reload this page!")
         },
         success:function(data){
-          $('ul.posts').html('');
+          $('dl.posts').html('');
           for(var i=0; i<data.length;i++){
               console.info(data[i].name);
-              $('ul.posts').append('<li><a href='+"'"+data[i].html_url+"'"+">"+data[i].name+"</a>&nbsp;&nbsp;&nbsp;["+data[i].description+"]")}
+              $('dl.posts').append('<dt><a href='+"'"+data[i].html_url+"'"+">"+data[i].name+"</a></dt><dd>"+data[i].description+"</dd>")}
         },
      })
 });
